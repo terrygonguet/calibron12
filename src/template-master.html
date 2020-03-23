@@ -10,7 +10,11 @@
 		<link rel="icon" type="image/png" href="favicon.png" />
 		%tailwind.styles% %sapper.styles% %sapper.head%
 	</head>
-	<body id="sapper" class="h-full text-lg grid grid-rows-1">
+	<body
+		id="sapper"
+		class="h-full text-lg grid"
+		style="grid-template-rows:100vh;"
+	>
 		%sapper.html% %sapper.scripts%
 	</body>
 </html>

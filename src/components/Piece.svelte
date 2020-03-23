@@ -8,14 +8,14 @@
 	export let starty
 
 	let w, h, wh, div, oldx, oldy,
-		x = startx, y = starty,
+		x = NaN, y = NaN,
 		rotating = false
 
 	$: cw = Math.round(wh / 72)
 	$: [w, h] = str2dim(dimensions)
-	$: x = startx - (w / 2) * cw
-	$: y = starty - (h / 2) * cw
-	
+	$: x = isNaN(x) ? startx - (w / 2) * cw : x
+	$: y = isNaN(y) ? starty - (h / 2) * cw : y
+
 	async function rotate() {
 		rotating = true
 		await new Promise(r => setTimeout(r, 200))
