@@ -5,11 +5,7 @@ const postcss = require("postcss")
 const dev = process.argv[2] == "development"
 
 const purgeCSSPlugin = PurgeCSS({
-	content: [
-		"./src/**/*.svelte",
-		"./src/template-master.html",
-		"./blogdata/*.json"
-	],
+	content: ["./src/**/*.svelte", "./src/template-master.html"],
 	fontFace: true,
 	defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
 	extractors: [

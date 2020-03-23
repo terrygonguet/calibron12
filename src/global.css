@@ -9,6 +9,12 @@ body {
 	height: 100%;
 }
 
+/* HACK */
+* {
+	border-style: solid;
+	border-width: 0;
+}
+
 .translate-center {
 	transform: translate(-50%, -50%);
 }
