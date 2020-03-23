@@ -1,22 +1,20 @@
 export const pieces = [
-	{ w: 7, h: 5 },
-	{ w: 10, h: 3 },
-	{ w: 12, h: 10 },
-	{ w: 15, h: 10 },
-	{ w: 15, h: 10 },
-	{ w: 15, h: 13 },
-	{ w: 15, h: 13 },
-	{ w: 20, h: 4 },
-	{ w: 20, h: 5 },
-	{ w: 20, h: 10 },
-	{ w: 23, h: 7 },
-	{ w: 23, h: 8 }
+	"12x10",
+	"20x10",
+	"23x7",
+	"7x5",
+	"15x10",
+	"15x13",
+	"15x10",
+	"15x13",
+	"10x3",
+	"23x8",
+	"20x5",
+	"20x4"
 ]
 
-export const spacers = [
-	{ w: 5, h: 4 },
-	{ w: 10, h: 2 },
-	{ w: 20, h: 1 }
-]
+export const spacers = ["5x4", "10x2", "20x1"]
 
-export const box = { w: 45, h: 36 }
+export const boxSpacer = "45x36"
+
+export const boxNoSpacer = "40x40"

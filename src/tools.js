@@ -22,3 +22,35 @@ export function* range(from, to, step = 1) {
 		t = isarray ? from.length - 1 : to
 	for (let i = f; i <= t; i += step) yield isarray ? [from[i], i] : i
 }
+
+/**
+ * Parses the dimension and returns it as `[w, h]`
+ * @param {string} str
+ */
+export function str2dim(str) {
+	return str.split("x").map(n => parseInt(n))
+}
+
+/**
+ * A bunch of magic numbers
+ * @param {number} i
+ * @param {number} cw
+ * @param {number} bw
+ * @param {number} bh
+ */
+export function startPosition(i, cw, bw, bh) {
+	let startx, starty
+
+	if (i <= 3) starty = -bh / 3.5
+	else if (i <= 5) starty = bh / 4
+	else if (i <= 7) starty = bh / 1.5
+	else starty = 4 * (bh / 3.2)
+
+	if (i <= 3) startx = (i * 1.66 - 1) * (bw / 3)
+	else if (i <= 7) startx = (i % 2 ? 4 : -1) * (bw / 3)
+	else startx = ((i - 8) * 1.66 - 1) * (bw / 3)
+
+	startx *= cw
+	starty *= cw
+	return { startx, starty }
+}
