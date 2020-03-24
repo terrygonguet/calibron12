@@ -25,6 +25,9 @@
 		<p class="my-4">
 			This only works on desktop/laptop because I'm too lazy to try to make that work on tiny phones.
 		</p>
+		<p class="my-4">
+			<strong class="underline">Right click</strong> to rotate pieces.
+		</p>
 		<a href="game" class="block flex justify-center my-8">
 			<button class="btn">PLAY</button>
 		</a>
